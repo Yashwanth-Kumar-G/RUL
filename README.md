@@ -12,8 +12,6 @@ This project focuses on predicting the Remaining Useful Life (RUL) of batteries,
 * [Future Work](#future-work)
 * [Installation and Usage](#installation-and-usage)
 * [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
 
 ## Problem Statement
 
@@ -73,18 +71,18 @@ MAE calculates the average magnitude of the absolute errors between predicted an
 ### Visualizations
 
 * **Regression Line Fit (Predicted vs. Actual RUL):**
-    * **Baseline SVR (Figure 2):** Predicted values have a large spread from the perfect prediction line, signifying large variations from the actual RUL. The model struggles to capture intrinsic relationships, leading to increased errors.
-    * **Optimized SVR (Figure 3):** The model, shown in green, has a denser distribution of points near the ideal prediction line, indicating enhanced predictive accuracy and reduced over/underestimation.
+    * **Baseline SVR:** Predicted values have a large spread from the perfect prediction line, signifying large variations from the actual RUL. The model struggles to capture intrinsic relationships, leading to increased errors.
+    * **Optimized SVR:** The model, shown in green, has a denser distribution of points near the ideal prediction line, indicating enhanced predictive accuracy and reduced over/underestimation.
 
     ![Regression Line Fit](/img/reg_line.png "Figure 2: Baseline SVR prediction plot. & Figure 3: Tuned SVR prediction plot.")
 
-* **Error Distribution Plot (Figure 4):**
+* **Error Distribution Plot:**
     * The blue histogram indicates the baseline SVR model's error distribution, while the green histogram shows the optimized SVR model. The red dashed vertical line at zero represents perfect prediction.
     * The optimized SVR model (green) has a tighter error distribution, with predictions more closely bunched around zero, reflecting lower variance and better accuracy than the baseline SVR model. The baseline model (blue) has a wider spread, suggesting larger prediction errors and more extreme deviations.
 
     ![Error Distribution Plot](/img/error_dis.png "Figure 4: Error distribution plot.")
 
-* **Learning Curve Plot (Figure 5):**
+* **Learning Curve Plot:**
     * Graphically illustrates the training and validation errors of both models. The blue dashed line indicates the training error of the baseline SVR, and the red solid line indicates its validation error. The green dashed line indicates the training error of the optimized SVR, and the orange solid line indicates its validation error.
     * The baseline SVR does not generalize data as much, as there is more distance between its training error and validation error. The tuned SVR has less distance between training and validation error, resulting in more generalization and overall performance.
 
@@ -117,3 +115,12 @@ You can install these dependencies using pip:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+### Contributing
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+1.  Fork the repository.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
